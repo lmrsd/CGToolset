@@ -1724,7 +1724,7 @@ def _convert(lines):
             raise NotImplementedError("QtCore.SIGNAL is missing from PyQt5 "
                                       "and so Qt.py does not support it: you "
                                       "should avoid defining signals inside "
-                                      "your ui files.")
+                                      "your ui dataio.")
         return line
 
     parsed = list()
@@ -1965,7 +1965,7 @@ if __name__ == "__main__":
 # Copyright (c) 2016-2017 Marcus Ottosson
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
+# of this software and associated documentation dataio (the "Software"), to deal
 # in the Software without restriction, including without limitation the rights
 # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 # copies of the Software, and to permit persons to whom the Software is
@@ -2034,7 +2034,7 @@ if __name__ == "__main__":
 # Modifications by Charl Botha <cpbotha@vxlabs.com>
 #
 # Permission is hereby granted, free of charge, to any person obtaining a
-# copy of this software and associated documentation files
+# copy of this software and associated documentation dataio
 # (the "Software"),to deal in the Software without restriction,
 # including without limitation
 # the rights to use, copy, modify, merge, publish, distribute, sublicense,
