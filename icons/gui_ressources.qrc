@@ -1,0 +1,19 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>clear.png</file>
+    <file>info.png</file>
+    <file>job.png</file>
+    <file>id.png</file>
+    <file>play.png</file>
+    <file>tag.png</file>
+    <file>software.png</file>
+    <file>factory.png</file>
+    <file>user.png</file>
+    <file>arrow_down.png</file>
+    <file>arrow_up.png</file>
+    <file>camera.png</file>
+    <file>expression.png</file>
+    <file>folder.png</file>
+    <file>refresh.png</file>
+  </qresource>
+</RCC>
