@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="icons">
+    <file>search.png</file>
     <file>clear.png</file>
     <file>info.png</file>
     <file>job.png</file>
