@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="icons">
+    <file>img_placeholder.png</file>
     <file>log.png</file>
     <file>clipboard_sucess.png</file>
     <file>clipboard_ready.png</file>
