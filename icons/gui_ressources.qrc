@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="icons">
+    <file>toggle_off.png</file>
+    <file>toggle_on.png</file>
     <file>file_increment.png</file>
     <file>img_placeholder.png</file>
     <file>log.png</file>
