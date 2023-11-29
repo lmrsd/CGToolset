@@ -1,6 +1,7 @@
 /HoudiniTD/
 /UtilsTD/
 /MayaTD/
+/ClarisseTD/
 /.idea/.gitignore
 /.idea/GrepConsole.xml
 /.idea/misc.xml
@@ -22,3 +23,4 @@
 /NukeTD/.idea/inspectionProfiles/profiles_settings.xml
 /NukeTD/.idea/vcs.xml
 /NukeTD/.idea/workspace.xml
+
