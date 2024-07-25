@@ -1,0 +1,18 @@
+{
+  "studio_name": "Mikros Animation",
+
+  "g" : "GLOBALS",
+  "default" : "base",
+  "last_version" : "last",
+  "main_asset_type" : ["sequences","assets"],
+
+  "dt" : "Directory Templates",
+  "dt_root" : "/s/prodanim/",
+  "dt_shot" : "{root}/{project}/sequences/{sequence}/{shot}",
+  "dt_workfile" : "{root}/{project}/{asset_type}/{asset_lv1}/{asset_lv2}/{step}/{task}/work/{software}",
+
+  "dt_publishfile" : "{root}/{project}/sequences/{sequence}/{shot}/{step}/{task}/publish/{software}",
+
+  "ft" : "Filename Template",
+  "ft_workfile" : "{seq}_{shot}-{variant}-{task}-{version}"
+}
