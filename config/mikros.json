@@ -6,8 +6,13 @@
   "last_version" : "last",
   "main_asset_type" : ["sequences","assets"],
 
+  "db_credit": {"id":"marsaudl","pwd":"@Mikros2024"},
+
   "dt" : "Directory Templates",
   "dt_root" : "/s/prodanim/",
+
+  "dt_tmp_imgs" : "/s/prodanim/tmnt2/_sandbox/marsaudl/02_IMAGES/LIGHTING/",
+
   "dt_shot" : "{root}/{project}/sequences/{sequence}/{shot}",
   "dt_workfile" : "{root}/{project}/{asset_type}/{asset_lv1}/{asset_lv2}/{step}/{task}/work/{software}",
 
