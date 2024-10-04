@@ -6,6 +6,10 @@
   "last_version" : "last",
   "main_asset_type" : ["sequences","assets"],
 
+  "bin" : "Binaries",
+  "bin_exrs" : "/s/apps/packages/cgDev/openexr/2.4.3/platform-linux/build-release/bin/",
+  "current_project": "tmnt2",
+
   "db_credit": {"id":"marsaudl","pwd":"@Mikros2024"},
 
   "dt" : "Directory Templates",
