@@ -8,15 +8,18 @@
 
   "bin" : "Binaries",
   "bin_exrs" : "/s/apps/packages/cgDev/openexr/2.4.3/platform-linux/build-release/bin/",
+
   "current_project": "tmnt2",
+  "project_colorspaces": ["linear","srgb8","rec709","spi_anim","SPI_gamma_rec709","acescg","Output - Rec.709","raw"],
 
   "db_credit": {"id":"marsaudl","pwd":"@Mikros2024"},
 
   "dt" : "Directory Templates",
   "dt_root" : "/s/prodanim/",
 
-  "dt_tmp_imgs" : "/s/prodanim/tmnt2/_sandbox/marsaudl/02_IMAGES/LIGHTING/",
+  "dt_user_path" : "/s/prodanim/tmnt2/_sandbox/{user}/",
 
+  "dt_tmp_imgs" : "/s/prodanim/tmnt2/_sandbox/{user}/02_IMAGES/LIGHTING/",
   "dt_shot" : "{root}/{project}/sequences/{sequence}/{shot}",
   "dt_workfile" : "{root}/{project}/{asset_type}/{asset_lv1}/{asset_lv2}/{step}/{task}/work/{software}",
 
