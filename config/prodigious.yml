@@ -1,0 +1,88 @@
+Studio : {name : "Prodigious", arbo_version : "v.2.0.0"}
+
+version: v + 3
+
+workFilePattern:
+  - model:
+  - shot:
+
+rootPattern :
+  0-INGEST:
+  0-PREPROD:
+    1-TOURNAGE:
+    2-HDR:
+    3-MODELS_3D:
+    4-MONTAGES:
+    5-RUSHES:
+    6-SOUNDS:
+    7-TYPOS:
+    8-FACING:
+    9-SOURCEIMAGES:
+  1-ABOUT_PROJECT:
+    1- BRIEFS:
+    2-REFS:
+  2-3D:
+  3-COMPO:
+  4-2D:
+  5-EDITING:
+    1-IN:
+    2-OUTEDIT:
+    3-WORK:
+  6-DAILIES:
+    FROM_CLIENT:
+    FROM_MATTEPAINTING:
+    TO_CLIENT:
+  7-DELIVRABLES:
+
+Assets-type:
+  shot:
+    type_name: shot
+    type_dependency:
+    type_root:
+      RUSHES: 0-PREPROD/5-RUSHES
+      3D : 2-3D
+      COMPO : 3-COMPO
+      2D : 4-2D
+    name: shot
+    name_pattern: 3
+    name_suffix: -SHOT
+
+  shot_global:
+    type_name: shot_global
+    type_dependency:
+    type_root:
+      RUSHES: 0-PREPROD/5-RUSHES
+      3D : 2-3D
+      COMPO : 3-COMPO
+      2D : 4-2D
+    name: shot
+    name_pattern: 3
+    name_suffix: -GLOBAL
+
+  character:
+    type_name: character
+    type_dependency:
+    type_root:
+      working : 0-PREPROD/3-MODELS_3D
+    name: character
+    name_pattern: Pascal
+
+3-MODELS_3D:
+  - $datefolder :
+
+5-RUHSES:
+  $SHOT:
+    BRUT:
+    ETAL:
+    PROXIES:
+
+3-COMPO:
+  $SHOT:
+    1-IN:
+      1-MAPS:
+      2-MAPS_WORK:
+    2-OUTCOMPO:
+      1-RENDERCOMPO:
+        PRECOMP_TAG_<VERSION>:
+      2-STEPS_EXPORT:
+    3-WORK:

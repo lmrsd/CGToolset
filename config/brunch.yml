@@ -1,0 +1,141 @@
+Studio : {name : "Brunch", arbo_version : "v.1.0.0"}
+
+version: v+3
+
+workFilePattern:
+  - shot : #TODO : $project_$episode_$sequence_$shot__$departement_$derived_$version
+  - model : #TODO : $project_$asset_$departement_$derived_$version
+
+rootPattern:
+  0_GESTION:
+    BREAKDOWNS:
+      CREDITS:
+      DOSSIERS:
+      NORMES_TECH:
+      PLANNING:
+      PRESENTATIONS:
+        __FROM_AGENCY__: #Dated folder inside
+        __FROM_ARTISTS__: #Dated folder inside
+      SUIVIS_FAB:
+        CR: # Pattern Inside ${Studio}_${ProjectName}_CR_REVIEW_${date}
+  1_PREPROD:
+    01_SCRIPT: #Dated folder inside
+    02_STORYBOARD: #Dated folder inside
+    03_ANIMATIC: #Dated folder inside
+    04_REF:
+      FROM_BRUNCH:
+      FROM_CLIENT:
+    05_CONCEPT:
+      CHARACTER: # Inside ${character_Asset}
+      PRINT:
+      PROP:
+      SET:
+    06_VISUAL_ID:
+      CHARACTERS:
+      FACING:
+      FONT:
+      FORMATS:
+      GUIDELINES:
+      LOGO:
+    07_PITCH:
+      Concept_Brunch:
+      Decor:
+      MOOD:
+      MOOD_SLECTION:
+      Scripts_agence:
+  2_PROD:
+    ASSETS:
+      CHARACTERS:
+      LIBRARY:
+      PROPS:
+      SETS:
+    SHOTS:
+    SOURCES:
+      ANIM_LIBRARY: # Studio Library space
+      FOOTAGES:
+        PREVIZ:
+        EXPORTS: # inside {FI} folder, {FI} = Film 2 letter
+        RUSHES:
+        SHOOT: # Movie name Inside "{FILM}/{FIL}_{SHXXX}", {FIL} = Film 3 letter
+        STOCKSHOTS:
+      GIZMOS:
+      MAPS:
+      PACK:
+      SCRIPTS:
+      SOUNDS: # folder {FILM} inside
+      VISUAL_REFS:
+        CODES:
+        FX:
+        MOOD:
+        ROBOT_SALUT:
+      __DB__:  # Where asset from file manager are stored
+  3_POST_PROD:
+    01_EDIT:
+    02_GRADING:
+    03_FINISHING:
+    04_SOUND:
+    MAQUETTE:
+    05_CONFO: #Nomenclature inside ${projet}_CONFO_${version}
+  4_MASTERS:
+
+Assets-type:
+  character:
+    type_name: character
+    type_dependency:
+      character:
+    type_root:
+      working : 2_PROD/ASSETS/CHARACTERS
+      out : 2_PROD/ASSETS/CHARACTERS/$character/__OUT__
+    name: character
+    name_pattern: UP # choices are low,UP,camel,Pascal
+    name_prefix: CHAR_
+    name_confo : whitespace_to_underscore
+
+  prop:
+    type_name: prop
+    type_dependency:
+      prop:
+    type_root:
+      working : 2_PROD/ASSETS/PROPS
+      out : 2_PROD/ASSETS/PROPS/$prop/__OUT__
+    name: prop
+    name_pattern: UP # choices are low,UP,camel,Pascal
+    name_prefix: PROP_
+    name_confo : whitespace_to_underscore
+
+  set:
+    type_name: set
+    type_dependency:
+      set:
+    type_root:
+      working : 2_PROD/ASSETS/SETS
+      out : 2_PROD/ASSETS/SETS/$set/__OUT__
+    name: prop
+    name_pattern: UP # choices are low,UP,camel,Pascal
+    name_prefix: SET_
+    name_confo : whitespace_to_underscore
+
+  episode:
+    type_name: episode
+    type_dependency:
+      episode:
+    type_root:
+      working : 2_PROD/SHOTS
+      data : 2_PROD/SHOTS/$episode/__DATA__
+      out : 2_PROD/SHOTS/$episode/__OUT__
+    name: episode
+    name_pattern: UP # choices are low,UP,camel,Pascal
+
+  shot:
+    type_name: shot
+    type_dependency:
+      episode:
+      shot:
+    type_root:
+      working : 2_PROD/SHOTS/$episode/
+      data : 2_PROD/SHOTS/$episode/$shot/__DATA__
+      out : 2_PROD/SHOTS/$episode/$shot/__OUT__
+    name: shot
+    name_pattern: 3 # choices are low,UP,camel,Pascal
+    name_prefix: $episode_SH
+    name_confo : keep_3

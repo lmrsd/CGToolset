@@ -1,0 +1,112 @@
+Studio : {name : "Nki", arbo_version : "v.2.0.0"}
+
+version: v+3
+
+workFilePattern:
+  shot : $project_$episode_$sequence_$shot__$departement_$derived_$version
+  model : $project_$asset_$departement_$derived_$version
+
+rootPattern:
+  management:
+    CR:
+    planning:
+    prezIntern:
+    prezClient:
+  in:
+    shooting:
+      rush:
+        raw:
+        proxy:
+          dpx:
+          pro_res:
+      stills:
+        chrome_ball:
+        color:
+        cube:
+        hdri_passes:
+        neutral:
+        shadow:
+        white_ball:
+    references:
+      colorkeys:
+      concept:
+      storyboard:
+    resources:
+      asset_client:
+      asset_provider:
+      fonts:
+      fx:
+      maps:
+      meshes:
+      mocap:
+      sounds:
+  working:
+    editing:
+    lib:
+    Rnd:
+    assets:
+    shots:
+  out:
+  master:
+    films:
+    making_of:
+    out_sourcing:
+    print:
+
+Assets-type:
+  character:
+    type_name: character
+    type_dependency:
+    type_root:
+      working : working/assets/characters
+      out : out/assets/characters
+    name: character
+    name_pattern: UP # choices are low,UP,camel,Pascal
+
+  prop:
+    type_name: static
+    type_dependency:
+    type_root:
+      working : working/assets/statics
+      out : out/assets/statics
+    name: static
+    name_pattern: camel
+
+  set:
+    type_name: set
+    type_dependency:
+    type_root:
+      working : working/assets/sets
+      out : out/assets/sets
+    name: set
+    name_pattern: Pascal
+
+  episode:
+    type_name: episode
+    type_dependency:
+    type_root:
+      working : working/shots
+      out : out/shots
+    name: episode
+    name_pattern: 3 # Three means digits with 3 numbers
+
+  sequence:
+    type_name: sequence
+    type_dependency:
+      episode:
+    type_root:
+      working : working/shots/$episode
+      out : out/shots/$episode
+    name: sequence
+    name_pattern: 3
+
+  shot:
+    type_name: shot
+    type_dependency:
+      episode:
+      sequence:
+    type_root:
+      working : working/shots/$episode/$sequence
+      out : out/shots/$episode/$sequence
+    name: shot
+    name_pattern: 3

@@ -1,0 +1,124 @@
+Studio : { name : "Void", arbo_version : "v.1.0.0"}
+
+version : 4
+
+workFilePattern:
+  - model : asset.$departement.$version
+  - shot : $sequence_$shot_$departement_$derived_$version
+
+rootPattern:
+  DAILIES:
+  FEEDBACKS:
+  MASTERS:
+  PROD:
+    CONCEPT:
+    DATAS:
+    PLANING:
+    REFERENCES:
+    SCRIPTS:
+    SOUNDS:
+    STORYBOARDS:
+  WORK:
+    EDIT:
+    FLAME:
+    MOTION_DESIGN:
+    PLATES:
+    TRACKING:
+    VFX:
+      caches:
+        alembic:
+        assets:
+        shots:
+      exports:
+      images:
+        assets:
+        shots:
+      scenes:
+        assets:
+        shots:
+      sounds:
+      sourceimages:
+        assets:
+        shots:
+
+Assets-type:
+  character:
+    type_name: character
+    type_dependency:
+    type_root:
+      working : WORK/VFX/scenes/assets/char
+      out : WORK/VFX/images/assets/char
+      export: WORK/VFX/caches/assets/char
+      source: WORK/VFX/sourceimages/assets/char
+    name: character
+    name_pattern: low # choices are low,UP,camel,Pascal
+
+  set:
+    type_name: set
+    type_dependency:
+    type_root:
+      working : WORK/VFX/scenes/assets/set
+      out : WORK/VFX/images/assets/set
+      export: WORK/VFX/caches/assets/set
+      source: WORK/VFX/sourceimages/assets/set
+    name: character
+    name_pattern: low # choices are low,UP,camel,Pascal
+
+  prop:
+    type_name: prop
+    type_dependency:
+    type_root:
+      working : WORK/VFX/scenes/assets/prop
+      out : WORK/VFX/images/assets/prop
+      export: WORK/VFX/caches/assets/prop
+      source: WORK/VFX/sourceimages/assets/prop
+    name: prop
+    name_pattern: low # choices are low,UP,camel,Pascal
+
+  sequence:
+    type_name: sequence
+    type_dependency:
+    type_root:
+    name: sequence
+    name_pattern: 3 # choices are low,UP,camel,Pascal
+
+  shot:
+    type_name: shot
+    type_dependency:
+      sequence:
+    type_root:
+      working : WORK/VFX/scenes/shots
+      out : WORK/VFX/images/shots
+      export: WORK/VFX/caches/shots
+      source: WORK/VFX/sourceimages/shots
+    name: shot
+    name_prefix : seq$sequencesh
+    name_pattern: 3 # choices are low,UP,camel,Pascal
+
+DAILIES:
+  $datedFolder:
+
+MASTERS:
+  YY_MM_DD:
+
+VFX:
+  $MAYA_Template:
+  caches:
+    alembic:
+    assets:
+    shots:
+  exports:
+  images:
+  scenes:
+  sounds:
+  sourceimages:
+
+model:
+  $assetname:
+    $departement:
+      publish:
+
+shots:
+  $seq01_$0010:
+    departement:
+      publish:

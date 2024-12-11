@@ -1,0 +1,78 @@
+Studio : { name : "Capsule", arbo_version : "v.1.0.0"}
+
+version : 3
+
+workFilePattern:
+  - $project.$departement.$shot_$version
+
+rootPattern:
+  01_DOCUMENTATION:
+  02_ASSET:
+  03_PREVIS:
+  04_ANIMATION:
+  05_FX:
+  06_ASSEMBLY:
+  07_RENDER:
+  08_COMPOSITING:
+  09_EDITORIAL:
+  10_RESSOURCES:
+  11_MASTER:
+  12_SHOOTING:
+  13_MAKINGOF:
+
+Assets-type:
+  character:
+    type_name: character
+    type_dependency:
+    type_root:
+      working : 02_ASSET/01_CHARACTER
+    name: character
+    name_pattern: UP
+    name_confo : whitespace_to_underscore
+
+  set:
+    type_name: set
+    type_dependency:
+    type_root:
+      working : 02_ASSET/02_SET
+    name: set
+    name_pattern: UP
+    name_confo : whitespace_to_underscore
+
+  prop:
+    type_name: prop
+    type_dependency:
+    type_root:
+      working : 02_ASSET/02_SET/_LIBRARY
+    name: prop
+    name_pattern: UP
+    name_confo : whitespace_to_underscore
+
+  episode:
+    type_name: episode
+    type_dependency:
+    type_root:
+      previs : 03_PREVIS
+      anim : 04_ANIMATION
+      fx : 05_FX
+      assembly : 06_ASSEMBLY
+      render : 07_RENDER
+      compo : 08_COMPOSITING
+      edit : 09_EDITORIAL
+    name: episode
+    name_pattern: UP
+
+  shot:
+    type_name: shot
+    type_dependency:
+      episode:
+    type_root:
+      previs: 03_PREVIS/$episode
+      anim: 04_ANIMATION/$episode
+      fx: 05_FX/$episode
+      assembly: 06_ASSEMBLY/$episode
+      render: 07_RENDER/$episode
+      compo: 08_COMPOSITING/$episode
+    name: shot
+    name_pattern: 4
+
