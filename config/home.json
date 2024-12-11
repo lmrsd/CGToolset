@@ -1,0 +1,31 @@
+{
+  "studio_name": "Home - LMP",
+  "studio_logo" : "studio_home.png",
+
+  "g" : "GLOBALS",
+  "default" : "base",
+  "last_version" : "last",
+  "main_asset_type" : ["shots","assets"],
+
+  "bin" : "Binaries",
+  "bin_exrs" : "C:/Program Files/Autodesk/MayaUSD/Maya2022/0.13.0/mayausd/USD2/bin",
+
+  "current_project": "",
+  "project_colorspaces": ["linear","srgb8","rec709","acescg"],
+
+  "db_credit": {"id":"Louis","pwd":"None"},
+
+  "dt" : "Directory Templates",
+  "dt_root" : "D:/prod",
+
+  "dt_user_path" : "D:/prod/_lab",
+
+  "dt_tmp_imgs" : "D:/prod/_lab/_cache/lighting/",
+  "dt_shot" : "{root}/{project}/prod/{asset_type}/{shot}",
+  "dt_workfile" : "{root}/{project}/prod/{asset_type}/{shot}/{dept}",
+
+  "dt_publishfile" : "{root}/{project}/prod/{asset_type}/{shot}/{dept}/publish",
+
+  "ft" : "Filename Template",
+  "ft_workfile" : "{shot}-{task}-{variant}-{version}"
+}
