@@ -74,13 +74,13 @@ def uiPath(cls):
     path = inspect.getfile(cls)
     dirname = os.path.dirname(path)
 
-    path = dirname + "/resource/ui/" + name + ".ui"
+    path = dirname + "/resource/ui/" + name + "media_importer.ui"
 
     if not os.path.exists(path):
-        path = dirname + "/ui/" + name + ".ui"
+        path = dirname + "/ui/" + name + "media_importer.ui"
 
     if not os.path.exists(path):
-        path = dirname + "/" + name + ".ui"
+        path = dirname + "/" + name + "media_importer.ui"
 
     return path
 
