@@ -166,7 +166,7 @@ class BaseLoadWidget(QtWidgets.QWidget):
         return menu.exec_(point)
 
     def loadUi(self):
-        """Convenience method for loading the .ui file."""
+        """Convenience method for loading the media_importer.ui file."""
         studioqt.loadUi(self, cls=BaseLoadWidget)
 
     def formWidget(self):
