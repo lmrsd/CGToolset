@@ -1,0 +1,42 @@
+{
+  "studio_name": "Prodigious",
+  "studio_logo" : "prodigious.png",
+
+  "g" : "GLOBALS",
+  "default" : "base",
+  "last_version" : "last",
+  "main_asset_type" : ["sequences","assets"],
+
+  "bin" : "Binaries",
+  "bin_exrs" : "",
+
+  "current_project": "RENAULT",
+  "project_colorspaces": ["linear","srgb8","rec709","spi_anim","SPI_gamma_rec709","acescg","Output - Rec.709","raw"],
+
+  "db_credit": {"id":"lmarsa","pwd":"J%Eqexo1"},
+
+  "dt" : "Directory Templates",
+  "dt_root" : "X:/CGI",
+  "dt_root_flter" : ["__project_template_cgi__","_From_LTO","_TMP",".vrayThumbs",".mayaSwatches"],
+
+  "dt_user_path" : "X:/CGI/_TMP/Users/{user}/",
+
+  "dt_tmp_imgs" : "X:/CGI/_TMP/Users/{user}/{user}/02_IMAGES/LIGHTING/",
+  "dt_sssshot" : "{root}/{project}/{ep}/{asset_type}",
+  "dt_shot" : "{root}/{project}/{ctxp}/{ctxc}",
+  "dt_workfile" : "{root}/{project}/{ep}/{asset_type}/{shot}/{task}/3-WORK",
+
+  "dt_publishfile" : "{root}/{project}/sequences/{sequence}/{shot}/{step}/{task}/publish/{software}",
+
+  "ft" : "Filename Template",
+  "ft_workfile" : "{task}_{shot}_{version}_{user}",
+
+  "softs": {
+    "after": ["X:/PIPELINE_STUDIO/launcher/after.ps1",[0,0],"after","after.png"],
+    "houdini_19_5": ["X:/PIPELINE_STUDIO/launcher/houdini_19_5.ps1",[0,1],"houdini_19_5","houdini.png"],
+    "houdini_20_5": ["X:/PIPELINE_STUDIO/launcher/houdini_20_5.ps1",[0,1],"houdini_20_5","houdini.png"],
+    "maya": ["X:/PIPELINE_STUDIO/launcher/maya.ps1",[0,1],"maya","maya.png"],
+    "nuke": ["X:/PIPELINE_STUDIO/launcher/nuke.ps1",[0,1],"nuke","nuke.png"]
+  }
+
+}
