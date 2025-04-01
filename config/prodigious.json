@@ -21,10 +21,11 @@
 
   "dt_user_path" : "X:/CGI/_TMP/Users/{user}/",
 
-  "dt_tmp_imgs" : "X:/CGI/_TMP/Users/{user}/{user}/02_IMAGES/LIGHTING/",
-  "dt_sssshot" : "{root}/{project}/{ep}/{asset_type}",
-  "dt_shot" : "{root}/{project}/{ctxp}/{ctxc}",
-  "dt_workfile" : "{root}/{vendor}/{project}/{asset_type}/{shot}/3-WORK",
+  "dt_tmp_imgs" : "",
+  "dt_shot" : "",
+  "dt_asset" : "",
+  "dt_workfile_shot" : "{prod_root}/{project}/{sub_project}/{asset_type}/{shot}/3-WORK",
+  "dt_workfile_asset" : "{prod_root}/{project}/{sub_project}/{asset_type}/{shot}/3-WORK",
 
   "dt_publishfile" : "{root}/{project}/sequences/{sequence}/{shot}/{step}/{task}/publish/{software}",
 
@@ -32,8 +33,8 @@
   "ft_workfile" : "{task}_{shot}_{version}_{user}",
 
   "vfx_browser": {
-    "lv_context" : {"keys": ["vendor","project"], "filter": []},
-    "lv_dept_soft" : {"keys": ["asset_type","shot"], "filter": []},
+    "lv_context" : {"keys": ["sub_project","asset_type","shot"], "filter": ["0-INGEST","1-ABOUT_PROJECT","7-DELIVRABLES","6-DAILIES"]},
+    "lv_dept_soft" : {"keys": ["sub_project","asset_type"], "filter": []},
     "lv_workfile" : {"keys": [], "filter": []}
   },
 
