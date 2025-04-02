@@ -24,8 +24,8 @@
   "dt_tmp_imgs" : "",
   "dt_shot" : "",
   "dt_asset" : "",
-  "dt_workfile_shot" : "{prod_root}/{project}/{sub_project}/{asset_type}/{shot}/3-WORK",
-  "dt_workfile_asset" : "{prod_root}/{project}/{sub_project}/{asset_type}/{shot}/3-WORK",
+  "dt_workfile_shot" : "{prod_root}/{project}/{sub_project}/{asset_type}/{shot}/{dir}/{workfile}",
+  "dt_workfile_asset" : "{prod_root}/{project}/{sub_project}/{asset_type}/{shot}/{dir}/{workfile}",
 
   "dt_publishfile" : "{root}/{project}/sequences/{sequence}/{shot}/{step}/{task}/publish/{software}",
 
@@ -33,9 +33,9 @@
   "ft_workfile" : "{task}_{shot}_{version}_{user}",
 
   "vfx_browser": {
-    "lv_context" : {"keys": ["sub_project","asset_type","shot"], "filter": ["0-INGEST","1-ABOUT_PROJECT","7-DELIVRABLES","6-DAILIES"]},
-    "lv_dept_soft" : {"keys": ["sub_project","asset_type"], "filter": []},
-    "lv_workfile" : {"keys": [], "filter": []}
+    "lv_context" : {"keys": ["sub_project","asset_type"], "filter": ["0-INGEST","1-ABOUT_PROJECT","7-DELIVRABLES","6-DAILIES"], "fill_widget": ["lv_dept_soft","QTreeView"]},
+    "lv_dept_soft" : {"keys": ["shot","dir"], "filter": ["_SHOT_TEMPLATE"], "fill_widget": ["lv_workfile","QTableView"]},
+    "lv_workfile" : {"keys": ["workfile"], "filter": [".swatches",".Thumbs"]}
   },
 
   "softs": {
