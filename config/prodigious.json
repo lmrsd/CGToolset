@@ -24,8 +24,8 @@
   "dt_tmp_imgs" : "",
   "dt_shot" : "",
   "dt_asset" : "",
-  "dt_workfile_shot" : "{prod_root}/{project}/{sub_project}/{asset_type}/{shot}/{dir}/{workfile}",
-  "dt_workfile_asset" : "{prod_root}/{project}/{sub_project}/{asset_type}/{shot}/{dir}/{workfile}",
+  "dt_workfile_shot" : "{prod_root}/{project}/{sub_project}/{asset_type}/{shot}/3-WORK/{workfile}",
+  "dt_workfile_asset" : "{prod_root}/{project}/{sub_project}/{asset_type}/{shot}/3-WORK/{workfile}",
 
   "dt_publishfile" : "{root}/{project}/sequences/{sequence}/{shot}/{step}/{task}/publish/{software}",
 
@@ -34,7 +34,12 @@
 
   "vfx_browser": {
     "lv_context" : {"keys": ["sub_project","asset_type"], "filter": ["0-INGEST","1-ABOUT_PROJECT","7-DELIVRABLES","6-DAILIES"], "fill_widget": ["lv_dept_soft","QTreeView"]},
-    "lv_dept_soft" : {"keys": ["shot","dir"], "filter": ["_SHOT_TEMPLATE"], "fill_widget": ["lv_workfile","QTableView"]},
+    "lv_dept_soft" : {"keys": ["shot"], "filter": ["_SHOT_TEMPLATE"], "fill_widget": ["lv_workfile","QTableView"]},
+    "lv_workfile" : {"keys": ["workfile"], "filter": [".swatches",".Thumbs"]}
+  },
+  "vfx_review": {
+    "lv_context" : {"keys": ["sub_project","asset_type"], "filter": ["0-INGEST","1-ABOUT_PROJECT","7-DELIVRABLES"], "fill_widget": ["lv_dept_soft","QTreeView"]},
+    "lv_dept_soft" : {"keys": ["shot"], "filter": ["_SHOT_TEMPLATE"], "fill_widget": ["lv_workfile","QTableView"]},
     "lv_workfile" : {"keys": ["workfile"], "filter": [".swatches",".Thumbs"]}
   },
 
@@ -43,6 +48,7 @@
     "premiere": ["powershell X:/PIPELINE_STUDIO/launcher/premiere.ps1",[0,1],"premiere","premiere.png"],
     "houdini.19.5": ["powershell X:/PIPELINE_STUDIO/launcher/houdini_19_5.ps1",[1,0],"houdini.19.5","houdini.png"],
     "houdini.20.5": ["powershell X:/PIPELINE_STUDIO/launcher/houdini_20_5.ps1",[1,1],"houdini.20.5","houdini.png"],
+    "houdini.20.5_OCIO": ["powershell X:/PIPELINE_STUDIO/launcher/houdini_20_5_OCIO.ps1",[1,2],"houdini.20.5_OCIO","houdini.png"],
     "maya": ["powershell X:/PIPELINE_STUDIO/launcher/maya.ps1",[2,0],"maya","maya.png"],
     "maya.2025": ["powershell X:/PIPELINE_STUDIO/launcher/maya_2025.ps1",[2,1],"maya.2025","maya.png"],
     "nuke": ["powershell X:/PIPELINE_STUDIO/launcher/nuke.ps1",[3,0],"nuke","nuke.png"],
