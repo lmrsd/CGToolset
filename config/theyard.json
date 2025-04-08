@@ -1,0 +1,27 @@
+{
+    "main_shot_template" : "{root}/{project}/sequence/{ctxp}/{ctxc}/wip/{dept}/{soft}/workfile/{workfile}",
+  "main_asset_template" : "{root}/{project}/lib/asset/{ctxp}/{ctxc}/wip/{dept}/{soft}/workfile/{workfile}",
+
+  "main_render_template" : "{root}/{project}/sequence/{ctxp}/{ctxc}/publish/render/{dept}/{renderp}/{version}",
+  "data_render_template" : "{root}/{project}/sequence/{ctxp}/{ctxc}/publish/render/{dept}/.released_datas.json",
+  "version_template" : "{ctp}_{ctxc}-{renderp}-{dept}-acescg-{version}",
+
+    "dir_exceptions" : [".omit","trk","vzero",".released_datas.json","source"],
+  "dept_exceptions" : [".omit","trk","vzero",".released_datas.json","source"],
+    "dir_exceptions" : [".omit","trk","vzero",".released_datas.json","source"],
+  "dept_exceptions" : [".omit","trk","vzero",".released_datas.json","source"],
+  "render_files_whitelist" : [".exr"],
+
+    "ocio_path": "{root}/{project}/lib/config/ocio/config.ocio",
+  "ocio_asset_path": "{root}/{project}/lib/config/ocio/config_asset.ocio",
+    "maya_template" : "/mnt/prod/lbp/tmp/lmarsaud/06_CGSUPS_TOOLS/maya/templates/lbp-template-maya.ma",
+    "except_extension" : [".nk~",".sh",".autosave",".crash",".rxt"],
+
+  "workfile_tempalte" : "{shot}-{dept}-main-main-{version}.{ext}",
+
+  "soft_templates": {
+    "maya": {"template": ["/mnt/prod/lbp/tmp/lmarsaud/06_CGSUPS_TOOLS/maya/templates/lbp-template-maya.ma"], "ext": ["ma","mb"]},
+    "nuke": {"template": ["/mnt/prod/lbp/tmp/lmarsaud/06_CGSUPS_TOOLS/nuke/templates/lbp-template-nuke.nk"], "ext": ["nk"]},
+    "clarisse": {"template": ["/mnt/prod/lbp/tmp/lmarsaud/06_CGSUPS_TOOLS/clarisse/templates/lbp-template-clarisse.project"], "ext": ["project"]}
+  }
+}

@@ -44,17 +44,17 @@
   },
 
   "softs": {
-    "after": ["powershell X:/PIPELINE_STUDIO/launcher/after.ps1",[0,0],"after","after.png"],
-    "premiere": ["powershell X:/PIPELINE_STUDIO/launcher/premiere.ps1",[0,1],"premiere","premiere.png"],
-    "houdini.19.5": ["powershell X:/PIPELINE_STUDIO/launcher/houdini_19_5.ps1",[1,0],"houdini.19.5","houdini.png"],
-    "houdini.20.5": ["powershell X:/PIPELINE_STUDIO/launcher/houdini_20_5.ps1",[1,1],"houdini.20.5","houdini.png"],
-    "houdini.20.5_OCIO": ["powershell X:/PIPELINE_STUDIO/launcher/houdini_20_5_OCIO.ps1",[1,2],"houdini.20.5_OCIO","houdini.png"],
-    "maya": ["powershell X:/PIPELINE_STUDIO/launcher/maya.ps1",[2,0],"maya","maya.png"],
-    "maya.2025": ["powershell X:/PIPELINE_STUDIO/launcher/maya_2025.ps1",[2,1],"maya.2025","maya.png"],
-    "nuke": ["powershell X:/PIPELINE_STUDIO/launcher/nuke.ps1",[3,0],"nuke","nuke.png"],
-    "nuke_assist": ["powershell X:/PIPELINE_STUDIO/launcher/nuke_assist.ps1",[3,1],"nuke","nuke.png"],
-    "nukeX": ["powershell X:/PIPELINE_STUDIO/launcher/nukeX.ps1",[3,2],"nuke","nuke.png"],
-    "rv": ["powershell X:/PIPELINE_STUDIO/launcher/rv.ps1",[4,0],"rv","rv.png"]
+    "after~2024": ["powershell X:/PIPELINE_STUDIO/launcher/after.ps1",[0,0],"after","after.png"],
+    "premiere~2024": ["powershell X:/PIPELINE_STUDIO/launcher/premiere.ps1",[0,1],"premiere","premiere.png"],
+    "houdini~19.5": ["powershell X:/PIPELINE_STUDIO/launcher/houdini_19_5.ps1",[1,0],"houdini.19.5","houdini.png"],
+    "houdini~20.5": ["powershell X:/PIPELINE_STUDIO/launcher/houdini_20_5.ps1",[1,1],"houdini.20.5","houdini.png"],
+    "houdini~20.5.OCO": ["powershell X:/PIPELINE_STUDIO/launcher/houdini_20_5_OCIO.ps1",[1,2],"houdini.20.5_OCIO","houdini.png"],
+    "maya~studio": ["powershell X:/PIPELINE_STUDIO/launcher/maya.ps1",[2,0],"maya","maya.png"],
+    "maya~2025": ["powershell X:/PIPELINE_STUDIO/launcher/maya_2025.ps1",[2,1],"maya.2025","maya.png"],
+    "nuke~14.0": ["powershell X:/PIPELINE_STUDIO/launcher/nuke.ps1",[3,0],"nuke","nuke.png"],
+    "nuke~14.assist": ["powershell X:/PIPELINE_STUDIO/launcher/nuke_assist.ps1",[3,1],"nuke","nuke.png"],
+    "nuke~14.0.nukeX": ["powershell X:/PIPELINE_STUDIO/launcher/nukeX.ps1",[3,2],"nuke","nuke.png"],
+    "rv~2.0": ["powershell X:/PIPELINE_STUDIO/launcher/rv.ps1",[4,0],"rv","rv.png"]
   }
 
 }
