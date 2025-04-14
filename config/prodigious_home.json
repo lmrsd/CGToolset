@@ -33,14 +33,14 @@
   "ft_workfile" : "{task}_{shot}_{version}_{user}",
 
   "vfx_browser": {
-    "lv_context" : {"keys": ["sub_project","asset_type"], "filter": ["0-INGEST","1-ABOUT_PROJECT","7-DELIVRABLES","6-DAILIES"], "fill_widget": ["lv_dept_soft","QTreeView"]},
-    "lv_dept_soft" : {"keys": ["shot"], "filter": ["_SHOT_TEMPLATE"], "fill_widget": ["lv_workfile","QTableView"]},
-    "lv_workfile" : {"keys": ["workfile"], "filter": [".swatches",".Thumbs"]}
+    "lv_wf_lv0" : {"keys": ["sub_project","asset_type"], "filter": ["0-INGEST","1-ABOUT_PROJECT","7-DELIVRABLES","6-DAILIES"], "fill_widget": ["lv_wf_lv1","QTreeView"]},
+    "lv_wf_lv1" : {"keys": ["shot"], "filter": ["_SHOT_TEMPLATE"], "fill_widget": ["lv_wf_lv2","QTableView"]},
+    "lv_wf_lv2" : {"keys": ["workfile"], "filter": [".swatches",".Thumbs"]}
   },
   "vfx_review": {
-    "lv_context" : {"keys": ["sub_project","asset_type"], "filter": ["0-INGEST","1-ABOUT_PROJECT","7-DELIVRABLES"], "fill_widget": ["lv_dept_soft","QTreeView"]},
-    "lv_dept_soft" : {"keys": ["shot"], "filter": ["_SHOT_TEMPLATE"], "fill_widget": ["lv_workfile","QTableView"]},
-    "lv_workfile" : {"keys": ["workfile"], "filter": [".swatches",".Thumbs"]}
+    "trv_rvw_ctx1" : {"keys": ["sub_project","asset_type"], "filter": ["0-INGEST","1-ABOUT_PROJECT","7-DELIVRABLES"], "fill_widget": ["trv_rvw_ctx2","QTreeView"]},
+    "trv_rvw_ctx2" : {"keys": ["shot"], "filter": ["_SHOT_TEMPLATE"], "fill_widget": ["tblev_rvw_pl","QTableView"]},
+    "tblev_rvw_pl" : {"keys": ["workfile"], "filter": [".swatches",".Thumbs"]}
   },
 
   "softs": {
