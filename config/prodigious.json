@@ -27,20 +27,22 @@
   "dt_workfile_shot" : "{prod_root}/{project}/{sub_project}/{asset_type}/{shot}/3-WORK/{workfile}",
   "dt_workfile_asset" : "{prod_root}/{project}/{sub_project}/{asset_type}/000-GLOBAL/3-WORK/ASSETS/WIP/{workfile}",
 
+  "dt_workfiles_review" : "{prod_root}/{project}/{sub_project}/6-DAILIES/{dir_lv0}/{dir_lv1}/{workfile}",
+
   "dt_publishfile" : "{root}/{project}/sequences/{sequence}/{shot}/{step}/{task}/publish/{software}",
 
   "ft" : "Filename Template",
   "ft_workfile" : "{task}_{shot}_{version}_{user}",
 
   "vfx_browser": {
-    "lv_wf_lv0" : {"keys": ["sub_project","asset_type"], "filter": ["0-INGEST","1-ABOUT_PROJECT","7-DELIVRABLES","6-DAILIES"], "fill_widget": ["lv_dept_soft","QTreeView"]},
-    "lv_wf_lv1" : {"keys": ["shot"], "filter": ["_SHOT_TEMPLATE"], "fill_widget": ["lv_workfile","QTableView"]},
-    "lv_wf_lv2" : {"keys": ["workfile"], "filter": [".swatches",".Thumbs"]}
+    "lv_wf_lv0" : {"keys": ["sub_project","asset_type"], "filter": ["0-INGEST","1-ABOUT_PROJECT","7-DELIVRABLES","6-DAILIES"], "fill_widget": ["lv_wf_lv1","QTreeView"]},
+    "lv_wf_lv1" : {"keys": ["shot"], "filter": ["_SHOT_TEMPLATE",".swatches",".Thumbs",".txt"], "fill_widget": ["lv_wf_lv2","QTableView"]},
+    "lv_wf_lv2" : {"keys": ["workfile"], "filter": [".swatches",".Thumbs",".txt"]}
   },
   "vfx_review": {
-    "trv_rvw_ctx1" : {"keys": ["sub_project","asset_type"], "filter": ["0-INGEST","1-ABOUT_PROJECT","7-DELIVRABLES"], "fill_widget": ["lv_dept_soft","QTreeView"]},
-    "trv_rvw_ctx2" : {"keys": ["shot"], "filter": ["_SHOT_TEMPLATE"], "fill_widget": ["lv_workfile","QTableView"]},
-    "tblev_rvw_pl" : {"keys": ["workfile"], "filter": [".swatches",".Thumbs"]}
+    "trv_rvw_ctx1" : {"keys": ["sub_project"], "filter": ["0-INGEST","1-ABOUT_PROJECT","7-DELIVRABLES","1-IN","3-WORK"], "fill_widget": ["trv_rvw_ctx2","QTreeView"]},
+    "trv_rvw_ctx2" : {"keys": ["dir_lv0","dir_lv1"], "filter": ["_SHOT_TEMPLATE","1-IN","3-WORK","FROM_CLIENT","FROM_FEELING",".db"], "fill_widget": ["tblev_rvw_pl","QTableView"]},
+    "tblev_rvw_pl" : {"keys": ["workfile"], "filter": [".swatches",".Thumbs",".db"]}
   },
 
   "softs": {
