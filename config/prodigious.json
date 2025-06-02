@@ -19,7 +19,7 @@
   "dt_root" : "X:/CGI",
   "dt_root_flter" : ["__project_template_cgi__","_From_LTO","_TMP",".vrayThumbs",".mayaSwatches"],
 
-  "dt_user_path" : "X:/CGI/_TMP/Users/{user}/",
+  "dt_user_path" : "X:/CGI/_TMP/Users/{user}",
 
   "dt_tmp_imgs" : "",
   "dt_shot" : "",
@@ -57,6 +57,12 @@
     "nuke~14.assist": ["powershell X:/PIPELINE_STUDIO/launcher/nuke_assist.ps1",[3,1],"nuke","nuke.png"],
     "nuke~nukex": ["powershell X:/PIPELINE_STUDIO/launcher/nukeX.ps1",[3,2],"nuke","nuke.png"],
     "rv~2.0": ["powershell X:/PIPELINE_STUDIO/launcher/rv.ps1",[4,0],"rv","rv.png"]
+  },
+  "players" : {
+    "rv": "powershell X:/PIPELINE_STUDIO/launcher/rv.ps1",
+    "djv_view" : "powershell X:/PIPELINE_STUDIO/launcher/rv.ps1",
+    "vlc" : "",
+    "os native" : ""
   }
 
 }
