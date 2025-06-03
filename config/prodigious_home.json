@@ -19,7 +19,7 @@
   "dt_root" : "D:/prod/_lab/PipelineTest/CGI",
   "dt_root_flter" : ["__project_template_cgi__","_From_LTO","_TMP",".vrayThumbs",".mayaSwatches"],
 
-  "dt_user_path" : "D:/prod/_lab/PipelineTest/CGI/_TMP/Users/{user}/",
+  "dt_user_path" : "D:/prod/_lab/PipelineTest/CGI/_TMP/Users/{user}",
 
   "dt_tmp_imgs" : "",
   "dt_shot" : "",
