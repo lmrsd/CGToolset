@@ -24,6 +24,7 @@
   "dt_tmp_imgs" : "",
   "dt_shot" : "",
   "dt_asset" : "",
+  "dt_projects" : "{prod_root}/{vendor}/{project}",
   "dt_workfile_shot" : "{prod_root}/{project}/{sub_project}/{asset_type}/{shot}/3-WORK/{workfile}",
   "dt_workfile_asset" : "{prod_root}/{project}/{sub_project}/{asset_type}/000-GLOBAL/3-WORK/ASSETS/WIP/{workfile}",
 
