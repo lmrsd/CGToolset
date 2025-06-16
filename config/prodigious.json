@@ -25,7 +25,7 @@
   "dt_shot" : "",
   "dt_asset" : "",
   "dt_project" : "{prod_root}/{project}/{sub_project}",
-  "dt_workfile_shot" : "{prod_root}/{project}/{sub_project}/{asset_type}/{shot}/3-WORK/{workfile}",
+  "dt_workfile_shot" : "{prod_root}/{project}/{sub_project}/{asset_type}/{shot}/3-WORK/WIP/{task}/{workfile}",
   "dt_workfile_asset" : "{prod_root}/{project}/{sub_project}/2-3D/000-GLOBAL/3-WORK/ASSETS/WIP/{asset}/{task}/{workfile}",
 
   "dt_workfiles_review" : "{prod_root}/{project}/{sub_project}/6-DAILIES/{dir_lv0}/{dir_lv1}/{workfile}",
@@ -38,7 +38,7 @@
   "vfx_workfile": {
     "lv_shot" : {"type":"entity","label":"Shot", "template":"dt_workfile_shot", "keys": ["asset_type"], "filter": ["0-INGEST","1-ABOUT_PROJECT","7-DELIVRABLES","6-DAILIES"], "binded_widget":"lv_shot" , "fill_widget": ["lv_wf_lv1_shot","QTreeView"]},
     "lv_asset" : {"type":"entity","label":"Asset", "template":"dt_workfile_asset", "keys": ["asset"], "filter": ["HIP"], "binded_widget":"lv_asset", "fill_widget": ["lv_wf_lv1_asset","QTreeView"]},
-    "lv_wf_lv1_shot" : {"template":"dt_workfile_shot", "keys": ["shot"], "filter": ["_SHOT_TEMPLATE",".swatches",".Thumbs",".txt"],"binded_widget":"lv_wf_lv1", "fill_widget": ["lv_wf_lv2","QTableView"]},
+    "lv_wf_lv1_shot" : {"template":"dt_workfile_shot", "keys": ["shot","task"], "filter": ["_SHOT_TEMPLATE",".swatches",".Thumbs",".txt"],"binded_widget":"lv_wf_lv1", "fill_widget": ["lv_wf_lv2","QTableView"]},
     "lv_wf_lv1_asset" : {"template":"dt_workfile_asset", "keys": ["task"], "filter": ["HIP",".swatches",".Thumbs",".txt"],"binded_widget":"lv_wf_lv1", "fill_widget": ["lv_wf_lv2","QTableView"]},
     "lv_wf_lv2" : {"keys": ["workfile"], "filter": [".swatches",".Thumbs",".txt"], "binded_widget":"lv_wf_lv2"}
   },
