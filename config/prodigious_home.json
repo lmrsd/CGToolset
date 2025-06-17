@@ -25,8 +25,10 @@
   "dt_shot" : "",
   "dt_asset" : "",
   "dt_project" : "{prod_root}/{project}/{sub_project}",
-  "dt_workfile_shot" : "{prod_root}/{project}/{sub_project}/{asset_type}/{shot}/3-WORK/{workfile}",
+  "dt_workfile_shot" : "{prod_root}/{project}/{sub_project}/{asset_type}/{shot}/3-WORK/WIP/{task}/{workfile}",
   "dt_workfile_asset" : "{prod_root}/{project}/{sub_project}/2-3D/000-GLOBAL/3-WORK/ASSETS/WIP/{asset}/{task}/{workfile}",
+
+  "dt_workfiles_review" : "{prod_root}/{project}/{sub_project}/6-DAILIES/{dir_lv0}/{dir_lv1}/{workfile}",
 
   "dt_publishfile" : "{prod_root}/{project}/sequences/{sequence}/{shot}/{step}/{task}/publish/{software}",
 
@@ -40,6 +42,7 @@
     "lv_wf_lv1_asset" : {"template":"dt_workfile_asset", "keys": ["task"], "filter": ["HIP",".swatches",".Thumbs",".txt"],"binded_widget":"lv_wf_lv1", "fill_widget": ["lv_wf_lv2","QTableView"]},
     "lv_wf_lv2" : {"keys": ["workfile"], "filter": [".swatches",".Thumbs",".txt"], "binded_widget":"lv_wf_lv2"}
   },
+
   "vfx_review": {
     "trv_rvw_ctx1" : {"keys": ["sub_project","asset_type"], "filter": ["0-INGEST","1-ABOUT_PROJECT","7-DELIVRABLES"], "fill_widget": ["trv_rvw_ctx2","QTreeView"]},
     "trv_rvw_ctx2" : {"keys": ["shot"], "filter": ["_SHOT_TEMPLATE"], "fill_widget": ["tblev_rvw_pl","QTableView"]},
