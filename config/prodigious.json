@@ -28,7 +28,7 @@
   "dt_workfile_shot" : "{prod_root}/{project}/{sub_project}/{asset_type}/{shot}/3-WORK/WIP/{task}/{workfile}",
   "dt_workfile_asset" : "{prod_root}/{project}/{sub_project}/2-3D/000-GLOBAL/3-WORK/ASSETS/WIP/{asset}/{task}/{workfile}",
 
-  "dt_workfiles_review" : "{prod_root}/{project}/{sub_project}/6-DAILIES/{dir_lv0}/{dir_lv1}/{workfile}",
+  "dt_workfiles_review" : "{prod_root}/{project}/{sub_project}/6-DAILIES/{dir_to}/{date_folder}/{workfile}",
 
   "dt_publishfile" : "{root}/{project}/sequences/{sequence}/{shot}/{step}/{task}/publish/{software}",
 
@@ -44,9 +44,9 @@
   },
 
   "vfx_review": {
-    "trv_rvw_ctx1" : {"keys": ["sub_project"], "filter": ["0-INGEST","1-ABOUT_PROJECT","7-DELIVRABLES","1-IN","3-WORK"], "fill_widget": ["trv_rvw_ctx2","QTreeView"]},
-    "trv_rvw_ctx2" : {"keys": ["dir_lv0","dir_lv1"], "filter": ["_SHOT_TEMPLATE","1-IN","3-WORK","FROM_CLIENT","FROM_FEELING",".db"], "fill_widget": ["tblev_rvw_pl","QTableView"]},
-    "tblev_rvw_pl" : {"keys": ["workfile"], "filter": [".swatches",".Thumbs",".db"]}
+    "lv_dailies" : {"type":"entity","label":"Dailies", "template":"dt_workfiles_review", "keys": ["dir_to"], "filter": ["FROM_CLIENT","FROM_PP","FROM_TRACK","FROM_ROTO"], "binded_widget":"lv_dailies" , "fill_widget": ["lv_rw_lv1_dailies","QTreeView"]},
+    "lv_rw_lv1_dailies" : {"template":"dt_workfiles_review", "keys": ["date_folder"], "filter": ["Thumbs.db"],"binded_widget":"lv_rw_lv1", "fill_widget": ["lv_rw_lv2","QTableView"]},
+    "lv_rw_lv2" : {"keys": ["workfile"], "filter": [".db","Thumbs.db",".swatches",".Thumbs",".txt"], "binded_widget":"lv_rw_lv2"}
   },
 
   "softs": {
@@ -63,10 +63,10 @@
     "rv~2.0": ["powershell X:/PIPELINE_STUDIO/launcher/rv.ps1",[4,0],"rv","rv.png"]
   },
   "players" : {
-    "rv": "powershell X:/PIPELINE_STUDIO/launcher/rv.ps1",
-    "djv_view" : "powershell X:/PIPELINE_STUDIO/launcher/rv.ps1",
-    "vlc" : "",
-    "os native" : ""
+    "rv": {"windows": "powershell X:/PIPELINE_STUDIO/launcher/rv.ps1"},
+    "djv_view" : {"windows": "powershell X:/PIPELINE_STUDIO/launcher/djv.ps1"},
+    "vlc" : {"windows": "powershell X:/PIPELINE_STUDIO/launcher/vlc.ps1"},
+    "os native" : {"windows": "powershell"}
   }
 
 }
