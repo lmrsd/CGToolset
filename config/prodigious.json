@@ -46,7 +46,7 @@
   "vfx_review": {
     "lv_dailies" : {"type":"entity","label":"Dailies", "template":"dt_workfiles_review", "keys": ["dir_to"], "filter": ["FROM_CLIENT","FROM_PP","FROM_TRACK","FROM_ROTO"], "binded_widget":"lv_dailies" , "fill_widget": ["lv_rw_lv1_dailies","QTreeView"]},
     "lv_rw_lv1_dailies" : {"template":"dt_workfiles_review", "keys": ["date_folder"], "filter": ["Thumbs.db"],"binded_widget":"lv_rw_lv1", "fill_widget": ["lv_rw_lv2","QTableView"]},
-    "lv_rw_lv2" : {"keys": ["workfile"], "filter": [".db","Thumbs.db",".swatches",".Thumbs",".txt"], "binded_widget":"lv_rw_lv2"}
+    "lv_rw_lv2" : {"keys": ["workfile"], "filter": [".db","Thumbs.db",".swatches",".Thumbs",".txt",".fbx"], "binded_widget":"lv_rw_lv2"}
   },
 
   "softs": {
