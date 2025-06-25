@@ -26,9 +26,14 @@
   "dt_asset" : "",
   "dt_project" : "{prod_root}/{project}/{sub_project}",
   "dt_workfile_shot" : "{prod_root}/{project}/{sub_project}/{asset_type}/{shot}/3-WORK/WIP/{task}/{workfile}",
+  "dt_workfile_shot2D" : "{prod_root}/{project}/{sub_project}/{asset_type}/{shot}/3-WORK/{workfile}",
+
   "dt_workfile_asset" : "{prod_root}/{project}/{sub_project}/2-3D/000-GLOBAL/3-WORK/ASSETS/WIP/{asset}/{task}/{workfile}",
 
   "dt_workfiles_review" : "{prod_root}/{project}/{sub_project}/6-DAILIES/{dir_to}/{date_folder}/{workfile}",
+  "dt_workfiles_3d_render" : "{prod_root}/{project}/{sub_project}/2-3D/{shot}/2-OUT3D/1-RENDER3D/{render}/{version}/{layer}/{workfile}",
+  "dt_workfiles_comp_render" : "{prod_root}/{project}/{sub_project}/3-COMPO/{shot}/2-OUTCOMPO/1-RENDERCOMPO/{version}/{workfile}",
+
 
   "dt_publishfile" : "{root}/{project}/sequences/{sequence}/{shot}/{step}/{task}/publish/{software}",
 
@@ -36,16 +41,26 @@
   "ft_workfile" : "{task}_{shot}_{version}_{user}",
 
   "vfx_workfile": {
-    "lv_shot" : {"type":"entity","label":"Shot", "template":"dt_workfile_shot", "keys": ["asset_type"], "filter": ["0-INGEST","1-ABOUT_PROJECT","7-DELIVRABLES","6-DAILIES"], "binded_widget":"lv_shot" , "fill_widget": ["lv_wf_lv1_shot","QTreeView"]},
+    "lv_shot3d" : {"type":"entity","label":"Shot-3D", "template":"dt_workfile_shot", "keys": ["asset_type"], "filter": ["0-INGEST","1-ABOUT_PROJECT","3-COMPO","4-2D","5-EDITING","6-DAILIES","7-DELIVRABLES"], "binded_widget":"lv_shot3d" , "fill_widget": ["lv_wf_lv1_shot3d","QTreeView"]},
+    "lv_shot2d" : {"type":"entity","label":"Shot-2D", "template":"dt_workfile_shot2D", "keys": ["asset_type"], "filter": ["0-INGEST","1-ABOUT_PROJECT","2-3D","7-DELIVRABLES","6-DAILIES"], "binded_widget":"lv_shot2d" , "fill_widget": ["lv_wf_lv1_shot2d","QTreeView"]},
     "lv_asset" : {"type":"entity","label":"Asset", "template":"dt_workfile_asset", "keys": ["asset"], "filter": ["HIP"], "binded_widget":"lv_asset", "fill_widget": ["lv_wf_lv1_asset","QTreeView"]},
-    "lv_wf_lv1_shot" : {"template":"dt_workfile_shot", "keys": ["shot","task"], "filter": ["_SHOT_TEMPLATE",".swatches",".Thumbs",".txt"],"binded_widget":"lv_wf_lv1", "fill_widget": ["lv_wf_lv2","QTableView"]},
+
+    "lv_wf_lv1_shot3d" : {"template":"dt_workfile_shot", "keys": ["shot","task"], "filter": ["_SHOT_TEMPLATE",".swatches",".Thumbs",".txt"],"binded_widget":"lv_wf_lv1", "fill_widget": ["lv_wf_lv2","QTableView"]},
+    "lv_wf_lv1_shot2d" : {"template":"dt_workfile_shot2D", "keys": ["shot"], "filter": ["_SHOT_TEMPLATE",".swatches",".Thumbs",".txt"],"binded_widget":"lv_wf_lv1", "fill_widget": ["lv_wf_lv2","QTableView"]},
     "lv_wf_lv1_asset" : {"template":"dt_workfile_asset", "keys": ["task"], "filter": ["HIP",".swatches",".Thumbs",".txt"],"binded_widget":"lv_wf_lv1", "fill_widget": ["lv_wf_lv2","QTableView"]},
-    "lv_wf_lv2" : {"keys": ["workfile"], "filter": [".swatches",".Thumbs",".txt"], "binded_widget":"lv_wf_lv2"}
+
+    "lv_wf_lv2" : {"keys": ["workfile"], "filter": [".swatches",".Thumbs",".txt",".nk~"], "binded_widget":"lv_wf_lv2"}
   },
 
   "vfx_review": {
     "lv_dailies" : {"type":"entity","label":"Dailies", "template":"dt_workfiles_review", "keys": ["dir_to"], "filter": ["FROM_CLIENT","FROM_PP","FROM_TRACK","FROM_ROTO"], "binded_widget":"lv_dailies" , "fill_widget": ["lv_rw_lv1_dailies","QTreeView"]},
+    "lv_rvw_3d" : {"type":"entity","label":"3d", "template":"dt_workfiles_3d_render", "keys": ["shot","render"], "filter": [], "binded_widget":"lv_rvw_3d" , "fill_widget": ["lv_rw_lv1_3d","QTreeView"]},
+    "lv_rvw_comp" : {"type":"entity","label":"Comp", "template":"dt_workfiles_comp_render", "keys": ["shot"], "filter": [], "binded_widget":"lv_rvw_comp" , "fill_widget": ["lv_rw_lv1_comp","QTreeView"]},
+
     "lv_rw_lv1_dailies" : {"template":"dt_workfiles_review", "keys": ["date_folder"], "filter": ["Thumbs.db"],"binded_widget":"lv_rw_lv1", "fill_widget": ["lv_rw_lv2","QTableView"]},
+    "lv_rw_lv1_3d" : {"template":"dt_workfiles_3d_render", "keys": ["version","layer"], "filter": ["Thumbs.db"],"binded_widget":"lv_rw_lv1", "fill_widget": ["lv_rw_lv2","QTableView"]},
+    "lv_rw_lv1_comp" : {"template":"dt_workfiles_comp_render", "keys": ["version"], "filter": ["Thumbs.db"],"binded_widget":"lv_rw_lv1", "fill_widget": ["lv_rw_lv2","QTableView"]},
+
     "lv_rw_lv2" : {"keys": ["workfile"], "filter": [".db","Thumbs.db",".swatches",".Thumbs",".txt",".fbx",".json"], "binded_widget":"lv_rw_lv2"}
   },
 
@@ -60,10 +75,12 @@
     "nuke~14.0": ["powershell X:/PIPELINE_STUDIO/launcher/nuke.ps1",[3,0],"nuke","nuke.png"],
     "nuke~14.assist": ["powershell X:/PIPELINE_STUDIO/launcher/nuke_assist.ps1",[3,1],"nuke","nuke.png"],
     "nuke~nukex": ["powershell X:/PIPELINE_STUDIO/launcher/nukeX.ps1",[3,2],"nuke","nuke.png"],
-    "rv~2.0": ["powershell X:/PIPELINE_STUDIO/launcher/rv.ps1",[4,0],"rv","rv.png"]
+    "rv~2.0": ["powershell X:/PIPELINE_STUDIO/launcher/rv.ps1",[4,0],"rv","rv.png"],
+    "djv_view~1.2": ["powershell X:/PIPELINE_STUDIO/launcher/djv.ps1",[4,1],"rv","play.png"]
   },
   "players" : {
     "rv": {"windows": "powershell X:/PIPELINE_STUDIO/launcher/rv.ps1"},
+    "hiero": {"windows": "powershell X:/PIPELINE_STUDIO/launcher/hiero.ps1"},
     "djv_view" : {"windows": "powershell X:/PIPELINE_STUDIO/launcher/djv.ps1"},
     "vlc" : {"windows": "powershell X:/PIPELINE_STUDIO/launcher/vlc.ps1"},
     "os native" : {"windows": "powershell"}
