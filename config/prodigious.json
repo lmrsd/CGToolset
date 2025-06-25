@@ -49,7 +49,7 @@
     "lv_wf_lv1_shot2d" : {"template":"dt_workfile_shot2D", "keys": ["shot"], "filter": ["_SHOT_TEMPLATE",".swatches",".Thumbs",".txt"],"binded_widget":"lv_wf_lv1", "fill_widget": ["lv_wf_lv2","QTableView"]},
     "lv_wf_lv1_asset" : {"template":"dt_workfile_asset", "keys": ["task"], "filter": ["HIP",".swatches",".Thumbs",".txt"],"binded_widget":"lv_wf_lv1", "fill_widget": ["lv_wf_lv2","QTableView"]},
 
-    "lv_wf_lv2" : {"keys": ["workfile"], "filter": [".swatches",".Thumbs",".txt",".nk~"], "binded_widget":"lv_wf_lv2"}
+    "lv_wf_lv2" : {"keys": ["workfile"], "filter": [".swatches",".Thumbs",".txt",".nk~",".autosave"], "binded_widget":"lv_wf_lv2"}
   },
 
   "vfx_review": {
