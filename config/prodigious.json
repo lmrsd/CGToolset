@@ -41,7 +41,7 @@
   "ft_workfile" : "{task}_{shot}_{version}_{user}",
 
   "vfx_workfile": {
-    "lv_shot3d" : {"type":"entity","label":"Shot-3D", "template":"dt_workfile_shot", "keys": ["asset_type"], "filter": ["0-INGEST","1-ABOUT_PROJECT","3-COMPO","4-2D","5-EDITING","6-DAILIES","7-DELIVRABLES"], "binded_widget":"lv_shot3d" , "fill_widget": ["lv_wf_lv1_shot3d","QTreeView"]},
+    "lv_shot3d" : {"type":"entity","label":"Shot-3D", "icon":"photoshop.png","template":"dt_workfile_shot", "keys": ["asset_type"], "filter": ["0-INGEST","1-ABOUT_PROJECT","3-COMPO","4-2D","5-EDITING","6-DAILIES","7-DELIVRABLES"], "binded_widget":"lv_shot3d" , "fill_widget": ["lv_wf_lv1_shot3d","QTreeView"]},
     "lv_shot2d" : {"type":"entity","label":"Shot-2D", "template":"dt_workfile_shot2D", "keys": ["asset_type"], "filter": ["0-INGEST","1-ABOUT_PROJECT","2-3D","7-DELIVRABLES","6-DAILIES"], "binded_widget":"lv_shot2d" , "fill_widget": ["lv_wf_lv1_shot2d","QTreeView"]},
     "lv_asset" : {"type":"entity","label":"Asset", "template":"dt_workfile_asset", "keys": ["asset"], "filter": ["HIP"], "binded_widget":"lv_asset", "fill_widget": ["lv_wf_lv1_asset","QTreeView"]},
 
@@ -53,7 +53,7 @@
   },
 
   "vfx_review": {
-    "lv_dailies" : {"type":"entity","label":"Dailies", "template":"dt_workfiles_review", "keys": ["dir_to"], "filter": ["FROM_CLIENT","FROM_PP","FROM_TRACK","FROM_ROTO"], "binded_widget":"lv_dailies" , "fill_widget": ["lv_rw_lv1_dailies","QTreeView"]},
+    "lv_dailies" : {"type":"entity", "icon":"photoshop.png", "label":"Dailies", "template":"dt_workfiles_review", "keys": ["dir_to"], "filter": ["FROM_CLIENT","FROM_PP","FROM_TRACK","FROM_ROTO"], "binded_widget":"lv_dailies" , "fill_widget": ["lv_rw_lv1_dailies","QTreeView"]},
     "lv_rvw_3d" : {"type":"entity","label":"3d", "template":"dt_workfiles_3d_render", "keys": ["shot","render"], "filter": [], "binded_widget":"lv_rvw_3d" , "fill_widget": ["lv_rw_lv1_3d","QTreeView"]},
     "lv_rvw_comp" : {"type":"entity","label":"Comp", "template":"dt_workfiles_comp_render", "keys": ["shot"], "filter": [], "binded_widget":"lv_rvw_comp" , "fill_widget": ["lv_rw_lv1_comp","QTreeView"]},
 
