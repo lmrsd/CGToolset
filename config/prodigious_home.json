@@ -40,7 +40,8 @@
     "lv_asset" : {"type":"entity","label":"Asset", "template":"dt_workfile_asset", "keys": ["asset"], "filter": ["HIP"], "binded_widget":"lv_asset", "fill_widget": ["lv_wf_lv1_asset","QTreeView"]},
     "lv_wf_lv1_shot" : {"template":"dt_workfile_shot", "keys": ["shot","task"], "filter": ["_SHOT_TEMPLATE",".swatches",".Thumbs",".txt"],"binded_widget":"lv_wf_lv1", "fill_widget": ["lv_wf_lv2","QTableView"]},
     "lv_wf_lv1_asset" : {"template":"dt_workfile_asset", "keys": ["task"], "filter": ["HIP",".swatches",".Thumbs",".txt"],"binded_widget":"lv_wf_lv1", "fill_widget": ["lv_wf_lv2","QTableView"]},
-    "lv_wf_lv2" : {"keys": ["workfile"], "filter": [".swatches",".Thumbs",".txt"], "binded_widget":"lv_wf_lv2"}
+    "lv_wf_lv2" : {"keys": ["workfile"], "filter": [".swatches",".Thumbs",".txt"], "binded_widget":"lv_wf_lv2"},
+    "software_button" : {"buttons": ["tbtn_wf_launch"]}
   },
 
   "vfx_review": {
@@ -50,17 +51,19 @@
   },
 
   "softs": {
-    "after~2024": ["powershell X:/PIPELINE_STUDIO/launcher/after.ps1",[0,0],"after","after.png"],
-    "premiere~2024": ["powershell X:/PIPELINE_STUDIO/launcher/premiere.ps1",[0,1],"premiere","premiere.png"],
-    "houdini~19_5": ["powershell X:/PIPELINE_STUDIO/launcher/houdini_19_5.ps1",[1,0],"houdini.19.5","houdini.png"],
-    "houdini~20.5": ["powershell X:/PIPELINE_STUDIO/launcher/houdini_20_5.ps1",[1,1],"houdini.20.5","houdini.png"],
-    "houdini~20.5.ocio": ["powershell X:/PIPELINE_STUDIO/launcher/houdini_20_5_OCIO.ps1",[1,2],"houdini.20.5_OCIO","houdini.png"],
-    "maya~studio": ["powershell X:/PIPELINE_STUDIO/launcher/maya.ps1",[2,0],"maya","maya.png"],
-    "maya~2025": ["rez env studio -- maya",[2,1],"maya.2025","maya.png"],
-    "nuke~Studio": ["powershell X:/PIPELINE_STUDIO/launcher/nuke.ps1",[3,0],"nuke","nuke.png"],
-    "nuke~Assist": ["powershell X:/PIPELINE_STUDIO/launcher/nuke_assist.ps1",[3,1],"nuke","nuke.png"],
-    "nuke~nukeX": ["powershell X:/PIPELINE_STUDIO/launcher/nukeX.ps1",[3,2],"nuke","nuke.png"],
-    "rv~2.0": ["powershell X:/PIPELINE_STUDIO/launcher/rv.ps1",[4,0],"rv","rv.png"]
+    "after~2024": {"windows": "powershell X:/PIPELINE_STUDIO/launcher/after.ps1","pos":[0,0],"title":"after","icon":"after.png",
+      "ext": "after"
+    },
+    "premiere~2024": {"windows": "powershell X:/PIPELINE_STUDIO/launcher/premiere.ps1","pos":[0,1],"title":"premiere","icon":"premiere.png", "ext": "premiere"},
+    "houdini~19_5": {"windows": "powershell X:/PIPELINE_STUDIO/launcher/houdini_19_5.ps1","pos":[1,0],"title":"houdini.19.5","icon":"houdini.png", "ext": "houdini"},
+    "houdini~20.5": {"windows": "powershell X:/PIPELINE_STUDIO/launcher/houdini_20_5.ps1","pos":[1,1],"title":"houdini.20.5","icon":"houdini.png", "ext": "houdini"},
+    "houdini~20.5.ocio": {"windows": "powershell X:/PIPELINE_STUDIO/launcher/houdini_20_5_OCIO.ps1","pos":[1,2],"title":"houdini.20.5_OCIO","icon":"houdini.png", "ext": "houdini"},
+    "maya~studio": {"windows": "powershell X:/PIPELINE_STUDIO/launcher/maya.ps1","pos":[2,0],"title":"maya","icon":"maya.png", "ext": "maya"},
+    "maya~2025": {"windows": "rez env studio -- maya","pos":[2,1],"title":"maya.2025","icon":"maya.png", "ext": "maya"},
+    "nuke~Studio": {"windows": "powershell X:/PIPELINE_STUDIO/launcher/nuke.ps1","pos":[3,0],"title":"nuke","icon":"nuke.png", "ext": "nuke"},
+    "nuke~Assist": {"windows": "powershell X:/PIPELINE_STUDIO/launcher/nuke_assist.ps1","pos":[3,1],"title":"nuke","icon":"nuke.png", "ext": "nuke"},
+    "nuke~nukeX": {"windows": "powershell X:/PIPELINE_STUDIO/launcher/nukeX.ps1","pos":[3,2],"title":"nuke","icon":"nuke.png", "ext": "nuke"},
+    "rv~2.0": {"windows":"powershell X:/PIPELINE_STUDIO/launcher/rv.ps1","pos":[4,0],"title":"rv","icon":"rv.png", "ext": "image"}
   },
 
   "players" : {
@@ -68,6 +71,18 @@
     "djv_view" : {"windows": "C:/PROGRA~1/DJV/bin/djv_view.exe"},
     "vlc" : {"windows": "C:/PROGRA~1/VideoLAN/VLC/vlc.exe"},
     "os native" : {"windows": "powershell"}
-  }
+  },
+
+  "extensions_lib" :{
+    "maya" : {"exts": [".ma",".mb"], "icon": "maya.png"},
+    "houdini" : {"exts": [".hip", ".hiplc", ".hipnc", ".hda", ".hdalc", ".hdanc"], "icon": "houdini.png"},
+    "nuke" : {"exts": [".nk"], "icon": "nuke.png"},
+    "after" : {"exts": [".aep"], "icon": "after.png"},
+    "photoshop" : {"exts": [".psd",".psb"], "icon": "photoshop.png"},
+    "video" : {"exts": [".mov",".mp4"], "icon":"play.png"},
+    "image" : {"exts": [".png",".tiff",".exr",".jpg",".jpeg"], "icon":"images.png"}
+  },
+
+  "templates_dir" : ["D:/prod/_lab/PipelineTest/templates"]
 
 }
