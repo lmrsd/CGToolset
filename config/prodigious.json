@@ -83,8 +83,10 @@
     "nuke~Assist": {"windows": "powershell X:/PIPELINE_STUDIO/launcher/nuke_assist.ps1","pos":[3,1],"title":"nuke","icon":"nuke.png", "ext": "nuke"},
     "nuke~nukeX": {"windows": "powershell X:/PIPELINE_STUDIO/launcher/nukeX.ps1","pos":[3,2],"title":"nuke","icon":"nuke.png", "ext": "nuke"},
 
-    "rv~2.0": {"windows":"powershell X:/PIPELINE_STUDIO/launcher/rv.ps1","pos":[4,0],"title":"rv","icon":"rv.png", "ext": "image"},
-    "djv~1.0": {"windows":"powershell X:/PIPELINE_STUDIO/launcher/djv.ps1","pos":[4,1],"title":"djv","icon":"djvview.png", "ext": "image"}
+    "blender~4.4.3": {"windows": "powershell X:/PIPELINE_STUDIO/launcher/blender.ps1","pos":[4,0],"title":"nuke","icon":"blender.png", "ext": "blender"},
+
+    "rv~2.0": {"windows":"powershell X:/PIPELINE_STUDIO/launcher/rv.ps1","pos":[5,0],"title":"rv","icon":"rv.png", "ext": "image"},
+    "djv~1.0": {"windows":"powershell X:/PIPELINE_STUDIO/launcher/djv.ps1","pos":[5,1],"title":"djv","icon":"djvview.png", "ext": "image"}
   },
 
   "players" : {
@@ -99,6 +101,7 @@
     "maya" : {"exts": [".ma",".mb"], "icon": "maya.png"},
     "houdini" : {"exts": [".hip", ".hiplc", ".hipnc", ".hda", ".hdalc", ".hdanc"], "icon": "houdini.png"},
     "nuke" : {"exts": [".nk"], "icon": "nuke.png"},
+    "blender" : {"exts": [".blend"], "icon": "blender.png"},
     "after" : {"exts": [".aep"], "icon": "after.png"},
     "photoshop" : {"exts": [".psd",".psb"], "icon": "photoshop.png"},
     "video" : {"exts": [".mov",".mp4"], "icon":"play.png"},
