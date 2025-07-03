@@ -54,6 +54,7 @@
     "after~2024": {"windows": "powershell X:/PIPELINE_STUDIO/launcher/after.ps1","pos":[0,0],"title":"after","icon":"after.png",
       "ext": "after"
     },
+
     "premiere~2024": {"windows": "powershell X:/PIPELINE_STUDIO/launcher/premiere.ps1","pos":[0,1],"title":"premiere","icon":"premiere.png", "ext": "premiere"},
     "houdini~19_5": {"windows": "powershell X:/PIPELINE_STUDIO/launcher/houdini_19_5.ps1","pos":[1,0],"title":"houdini.19.5","icon":"houdini.png", "ext": "houdini"},
     "houdini~20.5": {"windows": "powershell X:/PIPELINE_STUDIO/launcher/houdini_20_5.ps1","pos":[1,1],"title":"houdini.20.5","icon":"houdini.png", "ext": "houdini"},
