@@ -1,0 +1,26 @@
+
+
+
+
+{
+  "SHOT-0010": {
+    "DATA": {
+      "scene_unit": "cm",
+      "full_range" : [1000,1100],
+      "used_range": [1010, 1090],
+      "fps": 25.0,
+      "casting_asset" : ["car_twingo-gamme-2025", "camera_A"],
+      "asset_instances" : {
+        "car_twingo-gamme-2025_001": {"src":"car_twingo-gamme-2025" ,"LKD": "last"},
+        "camera_A_001": {"src":"camera_A","LAY": "last"}
+      }
+    },
+    "TASKS": {
+      "LAY" :  {"udata_publish": ["010-SHOT_LAY_v001.usd"], "wdata_publish": ["SHOT_LAY_v001.ma"]}
+    }
+  }
+}
+
+
+
+"RDR": {"udata_publish": ["010-SHOT_RDR_v001.usd"], "wdata_publish": ["SHOT_RDR_v001.ma"]}
