@@ -1,0 +1,103 @@
+{
+  "studio_name": "Mikros Animation",
+  "studio_logo" : "studio_mikros.png",
+
+  "g" : "GLOBALS",
+  "default" : "base",
+  "last_version" : "last",
+  "main_asset_type" : ["sequences","assets"],
+
+  "bin" : "Binaries",
+  "bin_exrs" : "/s/apps/packages/cgDev/openexr/2.4.3/platform-linux/build-release/bin/",
+
+  "current_project": "tmnt2",
+  "project_colorspaces": ["linear","srgb8","rec709","spi_anim","SPI_gamma_rec709","acescg","Output - Rec.709","raw"],
+
+  "db_credit": {"id":"marsaudl","pwd":"@Mikros2024"},
+
+  "dt" : "Directory Templates",
+  "dt_root" : "/s/prodanim/",
+  "dt_root_flter" : ["_reload","perfroce_helix"],
+
+  "dt_user_path" : "/s/prodanim/tmnt2/_sandbox/{user}",
+
+  "dt_tmp_imgs" : "",
+  "dt_shot" : "",
+  "dt_asset" : "",
+  "dt_project" : "{prod_root}/{project}",
+  "dt_workfile_shot" : "{prod_root}/{project}/sequences/{asset_type}/{shot}/{step}/{task}/work/{soft}/{workfile}",
+
+  "dt_workfile_asset" : "{prod_root}/{project}/{sub_project}/2-3D/000-GLOBAL/3-WORK/ASSETS/WIP/{asset}/{task}/{workfile}",
+
+  "dt_workfiles_review" : "{prod_root}/{project}/{sub_project}/6-DAILIES/{dir_to}/{date_folder}/{workfile}",
+  "dt_workfiles_3d_render" : "{prod_root}/{project}/{sub_project}/2-3D/{shot}/2-OUT3D/1-RENDER3D/{render}/{version}/{layer}/{workfile}",
+  "dt_workfiles_comp_render" : "{prod_root}/{project}/{sub_project}/3-COMPO/{shot}/2-OUTCOMPO/1-RENDERCOMPO/{version}/{workfile}",
+  "dt_workfiles_playblast" : "{prod_root}/{project}/{sub_project}/2-3D/{shot}/2-OUT3D/3-PLAYBLASTS/{version}/{workfile}",
+
+
+  "dt_publishfile" : "{root}/{project}/sequences/{sequence}/{shot}/{step}/{task}/publish/{software}",
+
+  "ft" : "Filename Template",
+  "ft_workfile" : "{task}_{shot}_{version}_{user}",
+
+  "vfx_workfile": {
+    "lv_shot3d" : {"type":"entity","label":"Shot-3D", "icon":"file_shot.png","template":"dt_workfile_shot", "keys": ["asset_type","shot"], "filter": [""], "binded_widget":"lv_shot3d" , "fill_widget": ["lv_wf_lv1_shot3d","QTreeView"]},
+    "lv_asset" : {"type":"entity","label":"Asset", "icon":"file_3d.png" ,"template":"dt_workfile_asset", "keys": ["asset"], "filter": [], "binded_widget":"lv_asset", "fill_widget": ["lv_wf_lv1_asset","QTreeView"]},
+
+    "lv_wf_lv1_shot3d" : {"template":"dt_workfile_shot", "keys": ["step","task","soft"], "filter": ["anim","anim_2d","anim_master","assetInstances","casting_tk","cloth","cloth_hair","crowd","deliver","hair"],"binded_widget":"lv_wf_lv1", "fill_widget": ["lv_wf_lv2","QTableView"]},
+    "lv_wf_lv1_asset" : {"template":"dt_workfile_asset", "keys": ["task"], "filter": ["HIP",".swatches",".Thumbs",".txt","mayaSwatches"],"binded_widget":"lv_wf_lv1", "fill_widget": ["lv_wf_lv2","QTableView"]},
+
+    "lv_wf_lv2" : {"keys": ["workfile"], "filter": [""], "binded_widget":"lv_wf_lv2"},
+    "software_button" : {"buttons": ["tbtn_wf_launch"]}
+  },
+
+  "vfx_review": {
+    "lv_dailies" : {"type":"entity", "icon":"eye.png", "label":"Dailies", "template":"dt_workfiles_review", "keys": ["dir_to"], "filter": ["FROM_CLIENT","FROM_PP","FROM_TRACK","FROM_ROTO"], "binded_widget":"lv_dailies" , "fill_widget": ["lv_rw_lv1_dailies","QTreeView"]},
+    "lv_rvw_3d" : {"type":"entity","icon":"teapot.png", "label":"3d", "template":"dt_workfiles_3d_render", "keys": ["shot","render"], "filter": [], "binded_widget":"lv_rvw_3d" , "fill_widget": ["lv_rw_lv1_3d","QTreeView"]},
+    "lv_rvw_comp" : {"type":"entity","icon":"multi_images.png","label":"Comp", "template":"dt_workfiles_comp_render", "keys": ["shot"], "filter": [], "binded_widget":"lv_rvw_comp" , "fill_widget": ["lv_rw_lv1_comp","QTreeView"]},
+    "lv_rvw_playblast" : {"type":"entity","icon":"images_grey.png","label":"Playblast", "template":"dt_workfiles_playblast", "keys": ["shot"], "filter": [], "binded_widget":"lv_rvw_playblast" , "fill_widget": ["lv_rw_lv1_playblast","QTreeView"]},
+
+    "lv_rw_lv1_dailies" : {"template":"dt_workfiles_review", "keys": ["date_folder"], "filter": ["Thumbs.db"],"binded_widget":"lv_rw_lv1", "fill_widget": ["lv_rw_lv2","QTableView"]},
+    "lv_rw_lv1_3d" : {"template":"dt_workfiles_3d_render", "keys": ["version","layer"], "filter": ["Thumbs.db"],"binded_widget":"lv_rw_lv1", "fill_widget": ["lv_rw_lv2","QTableView"]},
+    "lv_rw_lv1_comp" : {"template":"dt_workfiles_comp_render", "keys": ["version"], "filter": ["Thumbs.db"],"binded_widget":"lv_rw_lv1", "fill_widget": ["lv_rw_lv2","QTableView"]},
+    "lv_rw_lv1_playblast" : {"template":"dt_workfiles_playblast", "keys": ["version"], "filter": ["Thumbs.db"],"binded_widget":"lv_rw_lv1", "fill_widget": ["lv_rw_lv2","QTableView"]},
+
+    "lv_rw_lv2" : {"keys": ["workfile"], "filter": [".db","Thumbs.db",".swatches",".Thumbs",".txt",".fbx",".json"], "binded_widget":"lv_rw_lv2"}
+  },
+
+  "softs": {
+    "houdini~20.5.ocio": {"windows": "powershell X:/PIPELINE_STUDIO/launcher/houdini_20_5_OCIO.ps1","linux": "rez env tmnt2 -- houdini","pos":[1,2],"title":"houdini.20.5_OCIO","icon":"houdini.png", "ext": "houdini"},
+
+    "maya~studio": {"windows": "powershell X:/PIPELINE_STUDIO/launcher/maya_2025.ps1","linux": "rez env tmnt2 -- maya","pos":[2,1],"title":"maya.2025","icon":"maya.png", "ext": "maya"},
+
+    "nuke~nuke": {"windows": "powershell X:/PIPELINE_STUDIO/launcher/nukeX.ps1", "linux": "rez env tmnt2 -- nuke", "pos":[3,2],"title":"nuke","icon":"nuke.png", "ext": "nuke"},
+
+    "blender~4.4.3": {"windows": "powershell X:/PIPELINE_STUDIO/launcher/blender.ps1","linux": "rez env tmnt2 -- blender","pos":[4,0],"title":"nuke","icon":"blender.png", "ext": "blender"},
+
+    "rv~2.0": {"windows":"powershell X:/PIPELINE_STUDIO/launcher/rv.ps1","linux": "rez env tmnt2 -- rv","pos":[5,0],"title":"rv","icon":"rv.png", "ext": "image"},
+    "djv~1.0": {"windows":"powershell X:/PIPELINE_STUDIO/launcher/djv.ps1","linux": "rez env tmnt2 -- djv","pos":[5,1],"title":"djv","icon":"djvview.png", "ext": "image"},
+    "harmmony~24.0": {"windows":"powershell X:/PIPELINE_STUDIO/launcher/djv.ps1","linux": "rez env tmnt2 -- harmony","pos":[6,1],"title":"harmony","icon":"fileHarmony.png", "ext": "harmony"}
+  },
+
+  "players" : {
+    "rv": {"windows": "powershell X:/PIPELINE_STUDIO/launcher/rv.ps1","linux":"rez env tmnt2 --rv" },
+    "hiero": {"windows": "powershell X:/PIPELINE_STUDIO/launcher/hiero.ps1","linux":"rez env tmnt2 --nuke -hiero" },
+    "djv_view" : {"windows": "powershell X:/PIPELINE_STUDIO/launcher/djv.ps1","linux":"rez env tmnt2 -- djv" },
+    "vlc" : {"windows": "powershell X:/PIPELINE_STUDIO/launcher/vlc.ps1", "linux":"rez env tmnt2 -- vlc" },
+    "os native" : {"windows": "powershell","linux":"xfce4-terminal"}
+  },
+
+  "extensions_lib" :{
+    "maya" : {"exts": [".ma",".mb"], "icon": "maya.png"},
+    "harmony" : {"exts": [".xstage"], "icon": "fileHarmony.png"},
+    "houdini" : {"exts": [".hip", ".hiplc", ".hipnc", ".hda", ".hdalc", ".hdanc"], "icon": "houdini.png"},
+    "nuke" : {"exts": [".nk"], "icon": "nuke.png"},
+    "blender" : {"exts": [".blend"], "icon": "blender.png"},
+    "after" : {"exts": [".aep"], "icon": "after.png"},
+    "photoshop" : {"exts": [".psd",".psb"], "icon": "photoshop.png"},
+    "video" : {"exts": [".mov",".mp4"], "icon":"play.png"},
+    "image" : {"exts": [".png",".tiff",".exr",".jpg",".jpeg"], "icon":"images.png"}
+  },
+
+  "templates_dir" : ["D:/prod/_lab/PipelineTest/templates"]
+}
